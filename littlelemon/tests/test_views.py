@@ -7,8 +7,7 @@ from .serializers import MenuSerializer
 class MenuViewTest(TestCase):
     def setUp(self):
         self.client = APIClient()
-        self.menu_item1 = Menu.objects.create(title="Burger", price=10.99, inventory=50)
-        self.menu_item2 = Menu.objects.create(title="Pizza", price=12.99, inventory=40)
+        self.menu_item2 = Menu.objects.create(title="Burek", price=6.77, inventory=20)
 
     def test_getall(self):
         response = self.client.get('/restaurant/menu/items/')
